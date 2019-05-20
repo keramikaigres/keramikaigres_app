@@ -37,7 +37,10 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(bodyparser.json())
 app.use(express.static(config.pages()));
-
+app.use(function(req,res,next){
+ console.log("ip1: " + req.ip + " ip2: " + req.connection.remoteAddress)
+next()
+})
 // Глобальные обработчики
 // app.use((req,res,next) => {
 //     next();
