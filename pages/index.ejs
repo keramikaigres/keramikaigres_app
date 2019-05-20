@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../public/css/owl.carousel.css">
+    <link rel="stylesheet" href="../public/css/owl.theme.default.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    
+    
+    <title>Магазиин керамики</title>
+</head>
+<body>
+    <div class="app">
+    <header>
+        <%- include ./navigation %>
+      
+    </header>
+    <div class="slider">
+      
+
+<!-- slider -->
+<section class="intro">
+  <div class="slider">
+            <ul>
+              <li style="background-image:url(https://images.unsplash.com/photo-1458640904116-093b74971de9?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375)">
+                <div class="center-y">
+                  <h3>Slider Title #1</h3>
+                  <a href="#" class="myslider">View Project</a>	
+                </div>
+              </li>
+              <li style="background-image:url(https://images.unsplash.com/photo-1451906278231-17b8ff0a8880?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375)">
+                <div class="center-y">
+                  <h3>Slider Title #2</h3>
+                  <a href="#" class="myslider">View Project</a>	
+                </div>
+              </li>
+              <li style="background-image:url(https://images.unsplash.com/photo-1456428199391-a3b1cb5e93ab?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375)">
+                <div class="center-y">
+                  <h3>Slider Title #3</h3>
+                  <a href="#" class="myslider">View Project</a>	
+                </div>
+              </li>
+            </ul>
+    
+            <ul>
+              <nav>
+                <a href="#" class="myslider"></a>
+                <a href="#" class="myslider"></a>
+                <a href="#" class="myslider"></a>
+              </nav>
+            </ul>
+          </div>
+        </section>
+<!-- slider -->    
+            </div>
+        
+                
+<div class="content">
+    
+  <div class="title-block"><h2 class="h2-title">Каталог</h2></div>
+  <form action="">
+  <div class="option-block">
+    <div class="row-options">
+      
+      <ul>
+        <li><input type="checkbox" class="checkbox" name="material" id="wood-material" value="wood"><label for="wood-material">Дерево</label></li>
+        <li><input type="checkbox" class="checkbox" name="material" id="stone-material" value="stone"><label for="stone-material">Камень</label></li>
+        <li><input type="checkbox" class="checkbox" name="material" id="monocolor-material" value="monocolor"><label for="monocolor-material">Моноколор</label></li>
+        <li><input type="checkbox" class="checkbox" name="material" id="beton-material" value="beton"><label for="beton-material">Бетон</label></li>
+        <li><input type="checkbox" class="checkbox" name="material" id="tracery-material" value="tracery"><label for="tracery-material">Узор</label></li>
+      </ul>
+        <button id="test">Получить чекеты</button>
+    </div>
+  </div>
+</form>
+  <div class="catalog-block">
+
+
+    <% data.product.forEach(function(products) { %>
+      
+    <div class="tovar">
+      <div class="tovar-img"> 
+        <div class="flex">
+             
+          <span>
+            
+               <a href="<%= products.translit_links %>">  <h2 class="tovar-brands"><%= products.title_brands %></h2>  </a>  
+       
+      </div>
+          </span>
+        <img src="../public/images/<%= products.link_img %>" alt="Изображение товара">
+      </div>
+      <div class="tovar-option"><p>Коллекция: <%= products.title_product %> </p><p>Текстура: <%= products.texture %></p></div>
+    </div>
+   
+    <% }); %>
+
+      
+      <% if(red) { %>
+      <%-include ./moretovar %>
+        <% } %>
+
+    
+  </div>
+  <% if (display_more_product) { %>
+    <div class="show-tovar"> <div class="button-white" id = "showmore">ПОКАЗАТЬ ЕЩЕ</div> </div>
+    <% } %>
+  
+
+  <div class="popular-position">
+      <div class="title-block"><h2 class="h2-title" >Популярные позиции</h2></div>
+    <div class="catalog-block2">
+      <div class="content-popular-carousel">
+        <div class="owl-nav">
+            <div class="owl-prev-popular" id="owl-prevp-popular"></div>
+            <div class="owl-next-popular"  id="owl-next-popular"></div>
+        </div>
+      <div class="owl-carousel popular-carousel" id="owl-carousel-popular">
+        <div> <div class="tovar"></div>  </div>
+        <div> <div class="tovar"></div> </div>
+        <div> <div class="tovar"></div> </div>
+        <div> <div class="tovar"></div> </div>
+        
+      </div>
+  </div>
+</div>
+
+</div>
+    <div class="brands-s">
+    <div class="title-block"><h2 class="h2-title" style="color: white; top: 70px; position: relative;">Бренды</h2> </div>
+    <div class="brands-catalog">
+        <div class="owl-nav">
+            <div class="owl-prev"><div class="prev"></div></div>
+            <div class="owl-next"><div class="next"></div></div>
+        </div>
+      <div class="owl-carousel owl-carousel-brands" id="owl-carousel">
+        <% data.brands.forEach(function(brand) { %> 
+        <div> <img src="../public/images/fabrica/<%= brand.img_link_brands %>"> </div>
+        <% }); %>
+      </div>
+
+</div>
+      
+ </div>  
+  <!-- Карта - форма обратной связи -->
+   <%-include ./footer %>
+  
+</div>
+</div>
+
+
+
+<!-- bootstrap scr -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<!-- default my script -->
+<script src="../public/js/script.js"></script>
+<!-- slider scr-->
+<script src="../public/js/slider.js"></script>
+<!-- ovn carousel scr -->
+<script src="../public/js/jquery.min.js"></script>
+<script src="../public/js/owl.carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<div class="footer">
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2325a84808488d3c6910d056600afff40637184bdcccfe384a0f4c8b03a249cf&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+          <div class="back-call">
+            <div class="back-call-title">Наши контакты:</div>
+            <ul>
+              <li>Г.Краснодар, ул. Уральская</li>
+              <li>Г.Краснодар, ул. Российская</li>
+              <li>+7 929 123-43-56</li>
+              <li>Email: example@yandex.ru</li>
+              
+              
+            </ul>
+            <div class="button-white" data-toggle="modal" data-target="#exampleModal">Перезвоните мне</div>
+          </div>
+          
+      </div>
+    
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Форма обратной связи</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+                <form action="/callme" method="POST" id='targetForm'>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Ваше имя</label>
+                    <input type="text" class="form-control" name="name" id="exampleInputName" aria-describedby="NameHelp" placeholder="Имя">
+                    
+                </div>
+                <div class="form-group">
+                    <label  for="exampleInputPhoneNumb">Номер телефона</label>
+                    <input type="text" class="form-control" name="phone" id="exampleInputPhoneNumb" placeholder="Телефон">
+                    <small id="emailHelp" class="form-text text-muted">Номер в формате +7</small>
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Комментарий</label>
+                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    
+                        </div>
+                    </form>
+            </div>
+            
+            
+                    
+                
+        
+      </div>
+    </div>
+  </div>
+    </div>

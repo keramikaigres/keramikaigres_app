@@ -1,0 +1,42 @@
+{
+  "name": "keramikaigres",
+  "version": "1.0.0",
+  "description": "keramika-shop",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon ./server/app.js"
+  },
+  "author": "V.kaino",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "express-mysql-session": "^2.1.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "gulp": "^4.0.0",
+    "mongoose": "^5.4.4",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "mysql-client": "^0.3.0",
+    "mysqljs": "0.0.2-security",
+    "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.9",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sass": "^1.15.3",
+    "timeago.js": "^4.0.0-beta.2",
+    "translit-rus-eng": "^1.0.7"
+  },
+  "devDependencies": {
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "node-sass": "^4.11.0"
+  },
+  "engines": {
+    "node": ">=9.0.0"
+  }
+}
